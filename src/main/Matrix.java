@@ -64,34 +64,4 @@ public class Matrix {
         }
         return new Matrix(result, A.mod);
     }
-
-    //TODO : Remove after, this is only to display the implementation is working.
-    public static void main(String[] args) {
-        System.out.println("Matrix 3x4 mod 3 random");
-        Matrix m = new Matrix(3, 4, 3);
-        System.out.println(m);
-        System.out.println("Matrix {{1,2},{3,4},{5,6}");
-        int[][] values = new int[][]{{1,2},{3,4},{5,6}};
-        Matrix m2 = new Matrix(values, 3);
-        System.out.println(m2);
-
-        Matrix mat1 = new Matrix(new int[][]{{1, 3, 1, 1}, {3,2,4,2}, {1,0,1,0}}, 5);
-        Matrix mat2 = new Matrix(new int[][]{{1,4,2,3,2}, {0,1,0,4,2},{0,0,2,0,2}}, 5);
-        System.out.println("Matrice 1 (mod 5)");
-        System.out.println(mat1);
-        System.out.println("Matrice 2 (mod 5)");
-        System.out.println(mat2);
-
-        Matrix sum = operate(mat1, mat2, new Addition());
-        System.out.println("m1 + m2:");
-        System.out.println(sum);
-
-        Matrix diff = operate(mat1, mat2, new Subtraction());
-        System.out.println("m1 - m2");
-        System.out.println(diff);
-
-        Matrix prod = operate(mat1, mat2, new Multiplication());
-        System.out.println("m1 x m2");
-        System.out.println(prod);
-    }
 }
