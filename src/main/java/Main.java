@@ -7,13 +7,21 @@ public class Main {
   public static void main(String[] args) {
     // Handle improper argument count
     if (args.length != 5) {
-      throw new IllegalArgumentException("Wrong number of arguments. Requires : M1 N1 M2 N2 mod.");
+      System.out.println("Error: Wrong number of arguments. Requires : M1 N1 M2 N2 mod.");
+      return;
     }
 
     // Parse the arguments and create the matrices
-    int mod = Integer.parseInt(args[4]);
-    Matrix m1 = new Matrix(Integer.parseInt(args[0]), Integer.parseInt(args[1]), mod);
-    Matrix m2 = new Matrix(Integer.parseInt(args[2]), Integer.parseInt(args[3]), mod);
+    int mod;
+    Matrix m1, m2;
+    try {
+      mod = Integer.parseInt(args[4]);
+      m1 = new Matrix(Integer.parseInt(args[0]), Integer.parseInt(args[1]), mod);
+      m2 = new Matrix(Integer.parseInt(args[2]), Integer.parseInt(args[3]), mod);
+    } catch (RuntimeException e) {
+      System.out.println("Error: " + e.getMessage());
+      return;
+    }
 
     // Display modulus
     System.out.println("The modulus is " + mod);
