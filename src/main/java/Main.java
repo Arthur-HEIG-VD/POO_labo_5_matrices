@@ -8,9 +8,9 @@ public class Main {
     if (args.length != 5) {
       throw new IllegalArgumentException("Wrong number of arguments. Requires : M1 N1 M2 N2 mod.");
     } else {
-      int mod = Integer.valueOf(args[4]);
-      Matrix m1 = new Matrix(Integer.valueOf(args[0]), Integer.valueOf(args[1]), mod);
-      Matrix m2 = new Matrix(Integer.valueOf(args[2]), Integer.valueOf(args[3]), mod);
+      int mod = Integer.parseInt(args[4]);
+      Matrix m1 = new Matrix(Integer.parseInt(args[0]), Integer.parseInt(args[1]), mod);
+      Matrix m2 = new Matrix(Integer.parseInt(args[2]), Integer.parseInt(args[3]), mod);
       System.out.println("The modulus is " + mod);
       System.out.println("one:");
       System.out.println(m1);
