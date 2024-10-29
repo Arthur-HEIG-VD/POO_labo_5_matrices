@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Test the app" type="Application" factoryName="Application">
+  <configuration default="false" name="Negative args" type="Application" factoryName="Application" folderName="Invalid args">
     <option name="MAIN_CLASS_NAME" value="Main" />
     <module name="POO_labo_5_matrices" />
-    <option name="PROGRAM_PARAMETERS" value="3 4 3 5 5" />
+    <option name="PROGRAM_PARAMETERS" value="-3 4 3 5 5" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
