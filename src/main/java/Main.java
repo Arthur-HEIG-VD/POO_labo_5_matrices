@@ -6,7 +6,7 @@ import operations.Subtraction;
 public class Main {
   public static void main(String[] args) {
     if (args.length != 5) {
-      throw new IllegalArgumentException("Wrong number of arguments. Requires : N1 M1 N2 M2 mod.");
+      throw new IllegalArgumentException("Wrong number of arguments. Requires : M1 N1 M2 N2 mod.");
     } else {
       int mod = Integer.valueOf(args[4]);
       Matrix m1 = new Matrix(Integer.valueOf(args[0]), Integer.valueOf(args[1]), mod);
