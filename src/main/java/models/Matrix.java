@@ -42,7 +42,7 @@ public class Matrix {
    *
    * @param rows The number of rows in the matrix.
    * @param cols The number of columns in the matrix.
-   * @param mod  The modulus related to the matrix.
+   * @param mod The modulus related to the matrix.
    */
   public Matrix(int rows, int cols, int mod) {
     // Check if the parameters are valid
@@ -63,6 +63,14 @@ public class Matrix {
         this.coefficients[i][j] = rand.nextInt(mod);
       }
     }
+  }
+
+  public int getRows() {
+    return this.rows;
+  }
+
+  public int getCols() {
+    return this.cols;
   }
 
   /**
