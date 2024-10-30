@@ -1,21 +1,29 @@
 package models;
 
-import java.util.Random;
 import operations.Operation;
 
-public class Matrix {
-  private int[][] coefficients;
-  private int rows;
-  private int cols;
-  private int mod;
+import java.util.Random;
 
-  // TODO : Are values int[][] or int[] and it's taking rows + cols as parameters too for this constructor ??
-  // TODO : Handle exception once this question is answered.
+public class Matrix {
+  private final int[][] coefficients;
+  private final int rows;
+  private final int cols;
+  private final int mod;
+
+  /**
+   * Create a matrix from a 2D array of values.
+   *
+   * @param values The values to insert into the matrix. If they are not between
+   * 0 and mod - 1, they are taken modulo mod.
+   * @param mod The modulus to related to the matrix.
+   */
   public Matrix(int[][] values, int mod) {
-    rows = values.length;
-    cols = values[0].length;
+    this.rows = values.length;
+    this.cols = values[0].length;
     this.mod = mod;
-    coefficients = new int[rows][cols];
+    this.coefficients = new int[rows][cols];
+
+    // Copy the values into the matrix, taking the modulus if necessary
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
         coefficients[i][j] = Math.floorMod(values[i][j], mod);
