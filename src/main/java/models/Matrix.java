@@ -18,8 +18,7 @@ public class Matrix {
     coefficients = new int[rows][cols];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        //TODO : Are we applying mod to the values, or are we throwing an error if they aren't already to mod n ??
-        coefficients[i][j] = values[i][j] % mod;
+        coefficients[i][j] = Math.floorMod(values[i][j], mod);
       }
     }
   }
