@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Edge Cases Matrix" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="EdgeCases" />
+    <module name="POO_labo_5_matrices" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
