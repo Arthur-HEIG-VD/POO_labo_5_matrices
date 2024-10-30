@@ -3,7 +3,7 @@ import operations.Addition;
 import operations.Multiplication;
 import operations.Subtraction;
 
-public class Main {
+public class RandomMatrix {
   public static void main(String[] args) {
     // Handle improper argument count
     if (args.length != 5) {

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Too much args" type="Application" factoryName="Application" folderName="Invalid args">
-    <option name="MAIN_CLASS_NAME" value="Main" />
+    <option name="MAIN_CLASS_NAME" value="RandomMatrix" />
     <module name="POO_labo_5_matrices" />
     <option name="PROGRAM_PARAMETERS" value="3 4 3 5 5 5" />
     <method v="2">

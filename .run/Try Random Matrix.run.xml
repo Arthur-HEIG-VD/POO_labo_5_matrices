@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Test the app" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="Main" />
+  <configuration default="false" name="Try Random Matrix" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="RandomMatrix" />
     <module name="POO_labo_5_matrices" />
     <option name="PROGRAM_PARAMETERS" value="3 4 3 5 5" />
     <method v="2">
