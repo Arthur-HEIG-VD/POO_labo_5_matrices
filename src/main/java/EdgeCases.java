@@ -68,8 +68,9 @@ public class EdgeCases {
       System.out.println("[PASSED] Test different modulus 1");
     }
 
+    Matrix m3 = new Matrix(new int[][]{{1, 3, 1, 1}, {3, 2, 4, 2}, {1, 0, 1, 0}}, 2 * mod);
     try {
-      Matrix result = Matrix.operate(m1, m2, new Multiplication());
+      Matrix result = Matrix.operate(m1, m3, new Multiplication());
       System.out.println("[FAILED] Test different modulus 2");
     } catch (RuntimeException e) {
       System.out.println("[PASSED] Test different modulus 2");
