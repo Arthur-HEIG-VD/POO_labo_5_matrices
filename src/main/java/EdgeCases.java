@@ -1,6 +1,7 @@
 import models.Matrix;
 import operations.Addition;
 import operations.Multiplication;
+import operations.Subtraction;
 
 /**
  * EdgeCases class to test Matrix with edge cases.
@@ -120,11 +121,19 @@ public class EdgeCases {
     }
 
     Matrix m4 = new Matrix(4, 3, mod);
-    result = Matrix.operate(m1, m4, new Multiplication());
+    result = Matrix.operate(m1, m4, new Subtraction());
     if (result.getRows() != 4) {
       System.out.println("[FAILED] Test bigger size is kept 2");
     } else {
       System.out.println("[PASSED] Test bigger size is kept 2");
+    }
+
+    Matrix m5 = new Matrix(2, 11, mod);
+    result = Matrix.operate(m1, m5, new Multiplication());
+    if (result.getRows() != 2 || result.getCols() != 11) {
+      System.out.println("[FAILED] Test bigger size is kept 3");
+    } else {
+      System.out.println("[PASSED] Test bigger size is kept 3");
     }
   }
 }
