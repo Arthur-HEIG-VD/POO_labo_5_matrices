@@ -2,6 +2,8 @@ Aude Laydu, Jacobs Arthur
 
 # Rapport Labo 5 Matrices
 
+/!\ Les images dans le Markdown ne s'exportent pas correctement dans le pdf. Elles sont dans le zip.
+
 ## 1. Choix de conception et hypothèses
 
 ### Choix de conception
