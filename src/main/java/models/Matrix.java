@@ -4,6 +4,10 @@ import operations.Operation;
 
 import java.util.Random;
 
+/**
+ * @author: Aude Laydu
+ * @author: Arthur Jacobs
+ */
 public class Matrix {
   private final int[][] coefficients;
   private final int rows;

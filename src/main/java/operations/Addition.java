@@ -2,6 +2,9 @@ package operations;
 
 /**
  * Addition operation.
+ *
+ * @author: Aude Laydu
+ * @author: Arthur Jacobs
  */
 public class Addition extends Operation {
   @Override

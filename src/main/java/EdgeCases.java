@@ -5,6 +5,9 @@ import operations.Subtraction;
 
 /**
  * EdgeCases class to test Matrix with edge cases.
+ *
+ * @author: Aude Laydu
+ * @author: Arthur Jacobs
  */
 public class EdgeCases {
 

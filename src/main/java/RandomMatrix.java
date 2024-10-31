@@ -3,6 +3,10 @@ import operations.Addition;
 import operations.Multiplication;
 import operations.Subtraction;
 
+/**
+ * @author: Aude Laydu
+ * @author: Arthur Jacobs
+ */
 public class RandomMatrix {
   public static void main(String[] args) {
     // Handle improper argument count

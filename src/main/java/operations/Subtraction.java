@@ -2,6 +2,9 @@ package operations;
 
 /**
  * Subtraction operation.
+ *
+ * @author: Aude Laydu
+ * @author: Arthur Jacobs
  */
 public class Subtraction extends Operation {
   @Override

@@ -1,5 +1,9 @@
 package operations;
 
+/**
+ * @author: Aude Laydu
+ * @author: Arthur Jacobs
+ */
 public abstract class Operation {
   /**
    * Calculate the result of the operation on two integers.
