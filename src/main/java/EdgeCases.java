@@ -16,6 +16,7 @@ public class EdgeCases {
     testNullMatrixInitialization();
     testDifferentModulusOperations();
     testInvalidMatrixSize();
+    testBiggerSizeIsKept();
   }
 
   /**
@@ -26,14 +27,28 @@ public class EdgeCases {
       Matrix nullMatrix = new Matrix(0, 0, 5);
       System.out.println("[FAILED] Test null matrix 1");
     } catch (RuntimeException e) {
-      System.out.println("[PASSED] Test null matrix 1: passed");
+      System.out.println("[PASSED] Test null matrix 1");
+    }
+
+    try {
+      Matrix nullMatrix = new Matrix(0, 3, 5);
+      System.out.println("[FAILED] Test null matrix 2");
+    } catch (RuntimeException e) {
+      System.out.println("[PASSED] Test null matrix 2");
+    }
+
+    try {
+      Matrix nullMatrix = new Matrix(3, 0, 5);
+      System.out.println("[FAILED] Test null matrix 3");
+    } catch (RuntimeException e) {
+      System.out.println("[PASSED] Test null matrix 3");
     }
 
     try {
       Matrix nullMatrix = new Matrix(new int[][]{}, 5);
-      System.out.println("[FAILED] Test null matrix 2: passed");
+      System.out.println("[FAILED] Test null matrix 4");
     } catch (RuntimeException e) {
-      System.out.println("[PASSED] Test null matrix 2: passed");
+      System.out.println("[PASSED] Test null matrix 4");
     }
   }
 
@@ -60,24 +75,56 @@ public class EdgeCases {
     }
   }
 
+  /**
+   * Test invalid matrix size raises exception at initialization.
+   */
   private static void testInvalidMatrixSize() {
     int mod = 5;
-    Matrix m1 = new Matrix(3, 10, mod);
-    Matrix m2 = new Matrix(3, 3, mod);
 
-    Matrix result = Matrix.operate(m1, m2, new Addition());
-    if (result.getCols() != 10) {
+    try {
+      Matrix m1 = new Matrix(-3, 3, mod);
       System.out.println("[FAILED] Test invalid matrix size 1");
-    } else {
+    } catch (RuntimeException e) {
       System.out.println("[PASSED] Test invalid matrix size 1");
     }
 
-    Matrix m3 = new Matrix(4, 3, mod);
-    result = Matrix.operate(m1, m3, new Multiplication());
-    if (result.getRows() != 4) {
+    try {
+      Matrix m2 = new Matrix(3, -3, mod);
       System.out.println("[FAILED] Test invalid matrix size 2");
-    } else {
+    } catch (RuntimeException e) {
       System.out.println("[PASSED] Test invalid matrix size 2");
+    }
+
+    try {
+      Matrix m3 = new Matrix(new int[][]{{1, 3, 1}, {3, 2}}, mod);
+      System.out.println("[FAILED] Test invalid matrix size 3");
+    } catch (RuntimeException e) {
+      System.out.println("[PASSED] Test invalid matrix size 3");
+    }
+  }
+
+  /**
+   * Test matrix size with different sizes keep the bigger size.
+   */
+  private static void testBiggerSizeIsKept() {
+    int mod = 5;
+    Matrix m1 = new Matrix(3, 10, mod);
+    Matrix result;
+
+    Matrix m2 = new Matrix(3, 3, mod);
+    result = Matrix.operate(m1, m2, new Addition());
+    if (result.getCols() != 10) {
+      System.out.println("[FAILED] Test bigger size is kept 1");
+    } else {
+      System.out.println("[PASSED] Test bigger size is kept 1");
+    }
+
+    Matrix m4 = new Matrix(4, 3, mod);
+    result = Matrix.operate(m1, m4, new Multiplication());
+    if (result.getRows() != 4) {
+      System.out.println("[FAILED] Test bigger size is kept 2");
+    } else {
+      System.out.println("[PASSED] Test bigger size is kept 2");
     }
   }
 }
